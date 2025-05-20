@@ -1,10 +1,17 @@
+import { Content, RootLayout, SideBar, TopBar, TrafficLight } from './components';
+
 function App(): React.JSX.Element {
   // const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
 
   return (
-    <div className="h-full flex justify-center flex-items-center">
-      <div className="test m-0-auto hl-10"> today is wednesday</div>
-    </div>
+    <>
+      <TopBar />
+      <TrafficLight />
+      <RootLayout>
+        <SideBar className="b-blue b-solid b-2" />
+        <Content className="b-red b-solid b-2" />
+      </RootLayout>
+    </>
   );
 }
 

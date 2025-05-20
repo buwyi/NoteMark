@@ -1,7 +1,10 @@
 import { app, shell, BrowserWindow, ipcMain } from 'electron';
 import { join } from 'path';
 import { electronApp, optimizer, is } from '@electron-toolkit/utils';
+// import { setupTitlebar, attachTitlebarToWindow } from 'custom-electron-titlebar/main';
 import icon from '../../resources/icon.png?asset';
+
+// setupTitlebar();
 
 function createWindow(): void {
   // Create the browser window.
@@ -40,6 +43,8 @@ function createWindow(): void {
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'));
   }
+
+  // attachTitlebarToWindow(mainWindow);
 }
 
 // This method will be called when Electron has finished
