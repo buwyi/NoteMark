@@ -2,14 +2,13 @@ import type { ReactNode, FC, ComponentProps } from 'react';
 import clsx from 'clsx';
 
 interface RootLayoutProps extends ComponentProps<'main'> {
-  children?: ReactNode;
+  // children?: ReactNode;
 }
 interface SideBarProps extends ComponentProps<'aside'> {
-  children?: ReactNode;
+  // children?: ReactNode;
 }
 interface ContentProps extends ComponentProps<'div'> {
-  children?: ReactNode;
-  ref?: React.RefObject<HTMLDivElement>;
+  // children?: ReactNode;
 }
 
 export const RootLayout: FC<RootLayoutProps> = ({ children, className, ...props }) => {
@@ -17,9 +16,13 @@ export const RootLayout: FC<RootLayoutProps> = ({ children, className, ...props 
 };
 
 export const SideBar: FC<SideBarProps> = ({ children, className, ...props }) => {
-  return <aside className={clsx('h-[100vh] w-30% mt-20', className)}></aside>;
+  return <aside className={clsx('h-[100vh] w-30% mt-30', className)}>{children}</aside>;
 };
 
 export const Content: FC<ContentProps> = ({ children, className, ref, ...props }) => {
-  return <div ref={ref} className={clsx('h-full flex-1 overflow-auto', className)}></div>;
+  return (
+    <div ref={ref} className={clsx('h-full flex-1 overflow-auto', className)}>
+      {children}
+    </div>
+  );
 };

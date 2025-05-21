@@ -1,6 +1,7 @@
-import { Content, RootLayout, SideBar, TopBar, TrafficLight } from './components';
+import clsx from 'clsx';
+import { ActionButtonRow, Content, RootLayout, SideBar, TopBar, TrafficLight } from './components';
 
-function App(): React.JSX.Element {
+const App = (): React.JSX.Element => {
   // const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
 
   return (
@@ -8,11 +9,13 @@ function App(): React.JSX.Element {
       <TopBar />
       <TrafficLight />
       <RootLayout>
-        <SideBar className="b-blue b-solid b-2" />
-        <Content className="b-red b-solid b-2" />
+        <SideBar className="p-8">
+          <ActionButtonRow className={clsx('flex justify-between mt-2')} />
+        </SideBar>
+        <Content className="border-l border-l-white/20 bg-zinc-900/50">Content </Content>
       </RootLayout>
     </>
   );
-}
+};
 
 export default App;
