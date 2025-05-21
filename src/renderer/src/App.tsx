@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import {
   ActionButtonRow,
   Content,
+  FloatingNoteTitle,
+  MarkdownEditor,
   NotePreviewList,
   RootLayout,
   SideBar,
@@ -21,7 +23,10 @@ const App = (): React.JSX.Element => {
           <ActionButtonRow className={clsx('flex justify-between mt-2 h-30')} />
           <NotePreviewList className="h-[calc(100%-70px)] max-h-full overflow-auto mt-7 space-y-1" />
         </SideBar>
-        <Content className="border-l border-l-white/20 bg-zinc-900/50">Content </Content>
+        <Content className="border-l border-l-white/20 bg-zinc-900/50">
+          <FloatingNoteTitle className="pt-1em" />
+          <MarkdownEditor />
+        </Content>
       </RootLayout>
     </>
   );

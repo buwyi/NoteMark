@@ -1,9 +1,10 @@
-import { defineConfig, presetWind3 } from 'unocss';
+import { defineConfig, presetTypography, presetWind3 } from 'unocss';
 import presetRemToPx from '@unocss/preset-rem-to-px';
 
 export default defineConfig({
   presets: [
     presetWind3(),
+    presetTypography(),
     presetRemToPx({
       baseFontSize: 4,
     }),
