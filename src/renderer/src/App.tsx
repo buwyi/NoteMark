@@ -18,8 +18,8 @@ const App = (): React.JSX.Element => {
       <TrafficLight />
       <RootLayout>
         <SideBar className="p-8">
-          <ActionButtonRow className={clsx('flex justify-between mt-2')} />
-          <NotePreviewList className="mt-7 space-y-1" />
+          <ActionButtonRow className={clsx('flex justify-between mt-2 h-30')} />
+          <NotePreviewList className="h-[calc(100%-70px)] max-h-full overflow-auto mt-7 space-y-1" />
         </SideBar>
         <Content className="border-l border-l-white/20 bg-zinc-900/50">Content </Content>
       </RootLayout>

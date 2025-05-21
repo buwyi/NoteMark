@@ -22,6 +22,7 @@ export const NotePreviewList: FC<IProps> = ({ children, className, ...props }) =
       {notesMock.map((note) => {
         return <NotePreview key={note.title + note.lastEditTime} {...note} />;
       })}
+      {/* <li className="h-70" aria-hidden></li> */}
     </ul>
   );
 };

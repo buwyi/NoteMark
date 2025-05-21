@@ -16,7 +16,7 @@ export const RootLayout: FC<RootLayoutProps> = ({ children, className, ...props 
 };
 
 export const SideBar: FC<SideBarProps> = ({ children, className, ...props }) => {
-  return <aside className={clsx('h-[100vh] w-30% mt-30', className)}>{children}</aside>;
+  return <aside className={clsx('h-[100vh] w-280 mt-30', className)}>{children}</aside>;
 };
 
 export const Content: FC<ContentProps> = ({ children, className, ref, ...props }) => {

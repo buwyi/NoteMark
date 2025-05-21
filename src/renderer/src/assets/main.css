@@ -1,6 +1,6 @@
 #root {
   height: 100%;
-  background: rgba(22, 25, 37, 0.4);
+  background: rgba(22, 25, 37, 0.5);
 }
 html,
 body {
@@ -22,6 +22,8 @@ header {
 button {
   -webkit-app-region: no-drag;
 }
+
+/*滚动条样式更改*/
 ::-webkit-scrollbar {
   width: 8px;
 }
