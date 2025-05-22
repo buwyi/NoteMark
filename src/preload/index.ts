@@ -1,4 +1,4 @@
-import { contextBridge } from 'electron';
+import { contextBridge, ipcRenderer } from 'electron';
 // import { Titlebar } from 'custom-electron-titlebar';
 import { electronAPI } from '@electron-toolkit/preload';
 
@@ -8,8 +8,9 @@ if (!process.contextIsolated) {
 
 try {
   contextBridge.exposeInMainWorld('context', {
-    //TODO:
+    //TODO: 需要暴露给渲染程序的API
     locale: navigator.language,
+    windowControl: (action) => ipcRenderer.send('window-control', action),
   });
 } catch (err) {
   console.error(err);

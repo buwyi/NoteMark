@@ -45,6 +45,24 @@ function createWindow(): void {
   }
 
   // attachTitlebarToWindow(mainWindow);
+  // 窗口操作相关
+  ipcMain.on('window-control', (_, action) => {
+    switch (action) {
+      case 'close':
+        mainWindow.close();
+        break;
+      case 'minimize':
+        mainWindow.minimize();
+        break;
+      case 'maximize':
+        if (mainWindow.isMaximized()) {
+          mainWindow.unmaximize();
+        } else {
+          mainWindow.maximize();
+        }
+        break;
+    }
+  });
 }
 
 // This method will be called when Electron has finished
