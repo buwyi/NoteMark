@@ -27,6 +27,7 @@
     "@unocss/preset-rem-to-px": "^66.1.2",
     "@unocss/reset": "^66.1.2",
     "custom-electron-titlebar": "^4.2.8",
+    "jotai": "^2.12.4",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {

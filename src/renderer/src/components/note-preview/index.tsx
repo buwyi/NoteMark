@@ -27,6 +27,7 @@ export const NotePreview: FC<NotePreviewProps> = ({
         },
         className,
       )}
+      {...props}
     >
       <h3 className="truncate text-20 font-bold mb-5">{title}</h3>
       <span className="inline-block w-full text-left text-12 font-extralight mb-10">
